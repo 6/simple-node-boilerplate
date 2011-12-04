@@ -22,7 +22,7 @@ app.configure(() ->
   app.use app.router
 )
 
-app.get '/', (req, res) -> res.render 'index.jade', {title: 'hello'}
+app.get '/', (req, res) -> res.render 'index', {title: 'hello'}
 
 port = 3000
 app.listen(port)
