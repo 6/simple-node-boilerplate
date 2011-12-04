@@ -1,7 +1,7 @@
 {
   "author": "Peter Graham",
-  "name": "im",
-  "description": "node im",
+  "name": "simple-node-boilerplate",
+  "description": "for small web projects that I make with node",
   "version": "0.0.1",
   "repository": {
     "url": ""
