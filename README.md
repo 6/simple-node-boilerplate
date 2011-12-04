@@ -4,6 +4,6 @@ Components include:
 
 * CoffeeScript
 * ExpressJS for routing
-* Jade for views
+* Jade or EJS for views
 * Stylus for CSS
 * Normalize.css and jQuery
