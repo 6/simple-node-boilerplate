@@ -1,3 +1,3 @@
 exports.config =
   view_engine: "ejs"
-  port: 3000
+  port: process.env.PORT or 3000
