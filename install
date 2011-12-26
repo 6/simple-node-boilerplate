@@ -1,0 +1,4 @@
+#!/bin/sh
+gem install foreman
+gem install heroku
+npm install
