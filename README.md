@@ -19,3 +19,13 @@ Optionally, if you plan to use github, edit the remote "origin" URL to your git 
 * Jade or EJS for views
 * Stylus for CSS
 * Normalize.css and jQuery
+
+### heroku
+Create a new app
+
+    heroku create your-app-name -s cedar
+
+and push it when you make changes
+
+    git push heroku
+
