@@ -18,7 +18,7 @@ Optionally, if you plan to use github, edit the remote "origin" URL to your git 
 * ExpressJS for routing
 * Jade or EJS for views
 * Stylus for CSS
-* Normalize.css and jQuery
+* Bootstrap and jQuery
 
 ### heroku
 Create a new app
