@@ -1,4 +1,5 @@
 #!/bin/sh
+git remote add upstream https://github.com/6/simple-node-boilerplate.git
 gem install foreman
 gem install heroku
 npm install

@@ -29,3 +29,9 @@ and push it when you make changes
 
     git push heroku
 
+### pulling in updates
+
+The `upstream` remote is added when you run `./install`. To pull in upstream changes, run:
+
+    git fetch upstream
+    git merge upstream/master
