@@ -17,17 +17,14 @@ exports.expressApp = (app, config) ->
   app.configure ->
     app.set "views", "#{__dirname}/views"
     app.set "view engine", config.view_engine
-    
-    if config.style_engine is "stylus"
-      app.use require("stylus").middleware
-        src: "#{__dirname}/styles"
-        dest: constants.public
-        compress: true
-    else if config.style_engine is "less"
-      app.use express.compiler
-        src:"#{__dirname}/styles"
-        dest: constants.public
-        enable:['less']
+    app.use require("stylus").middleware
+      src: "#{__dirname}/styles"
+      dest: constants.public
+      compress: true
+    app.use express.compiler
+      src:"#{__dirname}/styles"
+      dest: constants.public
+      enable:['less']
     app.use express.compiler
       src: "#{__dirname}/coffee"
       dest: constants.public
