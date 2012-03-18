@@ -10,22 +10,20 @@ express.compiler.compilers.less.compile = (str, fn) ->
     fn(err)
 
 exports.constants = constants =
-  view_engine: "jade"
-  style_engine: "less"
   port: process.env.PORT or 3000
   public: "#{__dirname}/public"
 
-exports.expressApp = (app) ->
+exports.expressApp = (app, config) ->
   app.configure ->
     app.set "views", "#{__dirname}/views"
-    app.set "view engine", constants.view_engine
+    app.set "view engine", config.view_engine
     
-    if constants.style_engine is "stylus"
+    if config.style_engine is "stylus"
       app.use require("stylus").middleware
         src: "#{__dirname}/styles"
         dest: constants.public
         compress: true
-    else if constants.style_engine is "less"
+    else if config.style_engine is "less"
       app.use express.compiler
         src:"#{__dirname}/styles"
         dest: constants.public
