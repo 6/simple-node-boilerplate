@@ -19,11 +19,11 @@ exports.expressApp = (app, config) ->
     app.set "view engine", config.view_engine
     app.use express.compiler
       src:"#{__dirname}/styles"
-      dest: "#{constants.public}/gen"
+      dest: constants.public
       enable:['less']
     app.use express.compiler
       src: "#{__dirname}/coffee"
-      dest: "#{constants.public}/gen"
+      dest: constants.public
       enable: ['coffeescript']
     app.use express.static constants.public
     app.use express.bodyParser()
