@@ -10,7 +10,7 @@ express.compiler.compilers.less.compile = (str, fn) ->
     fn(err)
 
 exports.constants = constants =
-  view_engine: "ejs"
+  view_engine: "jade"
   style_engine: "less"
   port: process.env.PORT or 3000
   public: "#{__dirname}/public"
