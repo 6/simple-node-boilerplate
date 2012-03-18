@@ -11,7 +11,7 @@ exports.expressApp = (app) ->
     app.set "view engine", constants.view_engine
 
     app.use require("stylus").middleware
-      src: "#{__dirname}/styl"
+      src: "#{__dirname}/styles"
       dest: constants.public
       compress: true
     app.use express.compiler
