@@ -17,10 +17,6 @@ exports.expressApp = (app, config) ->
   app.configure ->
     app.set "views", "#{__dirname}/views"
     app.set "view engine", config.view_engine
-    app.use require("stylus").middleware
-      src: "#{__dirname}/styles"
-      dest: "#{constants.public}/gen"
-      compress: true
     app.use express.compiler
       src:"#{__dirname}/styles"
       dest: "#{constants.public}/gen"
