@@ -19,15 +19,15 @@ exports.expressApp = (app, config) ->
     app.set "view engine", config.view_engine
     app.use require("stylus").middleware
       src: "#{__dirname}/styles"
-      dest: constants.public
+      dest: "#{constants.public}/gen"
       compress: true
     app.use express.compiler
       src:"#{__dirname}/styles"
-      dest: constants.public
+      dest: "#{constants.public}/gen"
       enable:['less']
     app.use express.compiler
       src: "#{__dirname}/coffee"
-      dest: constants.public
+      dest: "#{constants.public}/gen"
       enable: ['coffeescript']
     app.use express.static constants.public
     app.use express.bodyParser()
