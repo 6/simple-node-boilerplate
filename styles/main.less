@@ -1,4 +1,12 @@
+@import "./styles/bootstrap/mixins.less";
+
 @background: #eee;
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
-  background: @background;
+  .gradientBar(lighten(@background, 10%), darken(@background, 10%));
 }
